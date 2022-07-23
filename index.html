@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quoter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="Assets/Q.png" type="image/gif" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="navbar">
+          <div class="inner-navbar">
+            <div class="logo">
+              <img src="Assets/logo.png" alt="" />
+            </div>
+            <div class="smiley">
+              <h1>Keep Smiling</h1>
+              <svg
+                width="58"
+                height="9"
+                viewBox="0 0 58 9"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M57.1982 0.933263C57.9609 1.51923 57.8483 2.69761 56.9734 3.09694C48.9414 6.7627 39.2873 8.82509 29.2936 8.98939C19.2604 9.15433 9.40666 7.39752 1.0538 3.97414C0.187304 3.61901 0.0231386 2.47988 0.734143 1.87045C1.11114 1.54732 1.64048 1.47279 2.0961 1.67015C10.0273 5.10566 19.5221 6.87746 29.1973 6.7184C38.8638 6.55948 48.1871 4.48176 55.8121 0.796622C56.2637 0.578404 56.8006 0.627731 57.1982 0.933263Z"
+                  fill="#4D4D4D"
+                />
+              </svg>
+            </div>
+            <div class="modes">
+              <div class="light-mode active">
+                <button onclick="changestate('light')" class="light-icon">
+                  <svg
+                    version="1.1"
+                    id="fi_606795"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 302.4 302.4"
+                    style="enable-background: new 0 0 302.4 302.4"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M204.8,97.6C191.2,84,172,75.2,151.2,75.2s-40,8.4-53.6,22.4c-13.6,13.6-22.4,32.8-22.4,53.6s8.8,40,22.4,53.6
+                                c13.6,13.6,32.8,22.4,53.6,22.4s40-8.4,53.6-22.4c13.6-13.6,22.4-32.8,22.4-53.6S218.8,111.2,204.8,97.6z M190.4,190.4
+                                c-10,10-24,16-39.2,16s-29.2-6-39.2-16s-16-24-16-39.2s6-29.2,16-39.2s24-16,39.2-16s29.2,6,39.2,16s16,24,16,39.2
+                                S200.4,180.4,190.4,190.4z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M292,140.8h-30.8c-5.6,0-10.4,4.8-10.4,10.4c0,5.6,4.8,10.4,10.4,10.4H292c5.6,0,10.4-4.8,10.4-10.4
+                                C302.4,145.6,297.6,140.8,292,140.8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M151.2,250.8c-5.6,0-10.4,4.8-10.4,10.4V292c0,5.6,4.8,10.4,10.4,10.4c5.6,0,10.4-4.8,10.4-10.4v-30.8
+                                C161.6,255.6,156.8,250.8,151.2,250.8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M258,243.6l-22-22c-3.6-4-10.4-4-14.4,0s-4,10.4,0,14.4l22,22c4,4,10.4,4,14.4,0S262,247.6,258,243.6z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M151.2,0c-5.6,0-10.4,4.8-10.4,10.4v30.8c0,5.6,4.8,10.4,10.4,10.4c5.6,0,10.4-4.8,10.4-10.4V10.4
+                                C161.6,4.8,156.8,0,151.2,0z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M258.4,44.4c-4-4-10.4-4-14.4,0l-22,22c-4,4-4,10.4,0,14.4c3.6,4,10.4,4,14.4,0l22-22C262.4,54.8,262.4,48.4,258.4,44.4z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M41.2,140.8H10.4c-5.6,0-10.4,4.8-10.4,10.4s4.4,10.4,10.4,10.4h30.8c5.6,0,10.4-4.8,10.4-10.4
+                                C51.6,145.6,46.8,140.8,41.2,140.8z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M80.4,221.6c-3.6-4-10.4-4-14.4,0l-22,22c-4,4-4,10.4,0,14.4s10.4,4,14.4,0l22-22C84.4,232,84.4,225.6,80.4,221.6z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path
+                          d="M80.4,66.4l-22-22c-4-4-10.4-4-14.4,0s-4,10.4,0,14.4l22,22c4,4,10.4,4,14.4,0S84.4,70.4,80.4,66.4z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                  </svg>
+                </button>
+              </div>
+              <div class="dark-mode">
+                <button onclick="changestate('dark')" class="dark-icon">
+                  <svg
+                    class="svg-inactive"
+                    version="1.1"
+                    id="fi_42011"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="548.087px"
+                    height="548.087px"
+                    viewBox="0 0 548.087 548.087"
+                    style="enable-background: new 0 0 548.087 548.087"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <g>
+                        <path
+                          d="M189.818,528.559c123.706,52.317,287.13-4.908,339.15-118.961c-83.461,60.649-171.422,71.257-260.773,16.145
+                                    c-78.642-48.507-115.884-123.322-104.367-214.266C178.484,95.743,251.691,31.581,365.833,10.818
+                                    C260.055-22.601,98.724,18.293,36.899,177.213C-10.877,300.041,36.818,463.846,189.818,528.559z"
+                        ></path>
+                        <path
+                          d="M350.423,116.556l35.565,34.435l-8.197,50.271c-1.257,7.711,3.546,11.465,10.727,8.384l44.048-18.895l44.048,18.895
+                                    c7.181,3.081,11.717-0.624,10.135-8.278l-10.433-50.38l38.106-34.745c5.773-5.263,4.223-10.669-3.464-12.072l-48.111-8.78
+                                    l-23.525-43.313c-3.729-6.866-9.775-6.866-13.505,0l-23.524,43.313l-48.116,8.784C346.49,105.576,344.809,111.117,350.423,116.556
+                                    z"
+                        ></path>
+                        <path
+                          d="M427.939,323.493l-34.623-6.315l-16.932-31.172c-2.685-4.94-7.034-4.94-9.719,0l-16.932,31.172l-34.619,6.315
+                                    c-5.532,1.008-6.74,4.998-2.701,8.911l25.594,24.781l-5.899,36.178c-0.906,5.549,2.55,8.25,7.72,6.034l31.697-13.595
+                                    l31.697,13.595c5.169,2.216,8.434-0.448,7.291-5.957l-7.507-36.255l27.422-25.002C434.589,328.39,433.471,324.501,427.939,323.493
+                                    z"
+                        ></path>
+                      </g>
+                    </g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                    <g></g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="main-grid">
+      <div class="form-container">
+        <div class="required">
+          <h1>Name and Quote is Required</h1>
+        </div>
+        <img
+          class="loading-gif"
+          src="Assets/813.gif"
+          alt=""
+          style="
+            position: absolute;
+            z-index: 100;
+            left: 50%;
+            display: none;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          "
+        />
+        <div class="inner-form">
+          <form class="quoter-form">
+            <h1><label for="name"></label>Name</h1>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Type your sweet name here.."
+            />
+            <!-- <div class="pic-upload-container">
+              <h1><label for="selectedFile"></label>Profile Pic</h1>
+              <div class="upload-btn">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onchange="loadFile(event)"
+                  name="profile-input"
+                  id="selectedFile"
+                  style="display: none"
+                />
+                <input
+                  type="button"
+                  value="Upload"
+                  class="upload-btn-actual"
+                  onclick="document.getElementById('selectedFile').click();"
+                />
+              </div>
+            </div>
+            <div class="profile-display">
+              <img
+                id="profile-pic-input"
+                src="Assets/DefaultProfileIcon.png"
+                style="width: 60px; height: 60px"
+                alt=""
+              />
+            </div> -->
+            <h1 style="padding: 10px 0px 15px 0px">
+              <label for="quote-input"></label>Quote
+            </h1>
+            <div class="quote-upload-container">
+              <textarea
+                type="text"
+                id="quote-input"
+                name="quote-input"
+                placeholder="Start typing..."
+              ></textarea>
+            </div>
+            <div style="display: flex; align-items: center">
+              <h1 style="padding: 5px 5px 9px 0px; font-size: 25px">
+                <label for="color"></label>Color
+              </h1>
+              <input type="color" name="color-input" id="color" />
+            </div>
+            <div class="submit-btn">
+              <svg
+                version="1.1"
+                id="fi_16294"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 331.331 331.331"
+                style="enable-background: new 0 0 331.331 331.331"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    style="fill: white"
+                    d="M30.421,317.462l4.422-17.661l-12.194-4.814l-8.376,13.804c0,0,4.618,12.526-0.511,22.539
+                    C13.766,331.331,20.184,320.399,30.421,317.462z M22.229,309.358c1.501-0.615,3.231,0.087,3.851,1.561
+                    c0.625,1.474-0.087,3.171-1.588,3.786c-1.501,0.615-3.231-0.087-3.851-1.561C20.01,311.664,20.723,309.967,22.229,309.358z"
+                  ></path>
+                  <path
+                    style="fill: white"
+                    d="M158.353,112.621c-35.115,28.8-81.086,88.124-120.073,157.423l-0.022-0.027l-6.815,12.026
+                    l7.267,2.796l3.84-10.117c20.799-37.491,77.224-135.4,180.397-200.451c0,0,38.411-22.877,76.256-54.516
+                    c-9.214,7.702-27.391,17.356-37.247,23.584C236.088,59.683,204.166,75.043,158.353,112.621z"
+                  ></path>
+                  <path
+                    style="fill: white"
+                    d="M33.2,215.365c-7.985,28.223-7.528,49.718-4.438,55.625h4.83
+                    c13.337-27.625,77.572-127.693,117.554-159.016c41.424-32.455,73.378-51.339,100.253-65.111
+                    c9.437-4.835,19.118-11.384,27.848-17.949c10.601-8.36,21.348-17.302,30.758-26.053L282.728,20.75L294.89,2.148L271.67,25.759
+                    L286.78,0c-35.746,3.225-68.918,21.109-68.918,21.109c-13.271,15.741-23.959,40.782-23.959,40.782
+                    c-0.37-12.521,8.11-31.481,8.11-31.481c-6.266,2.861-30.073,16.459-30.073,16.459c-11.645,9.66-15.262,35.06-15.262,35.06
+                    c-2.214-10.019,5.526-29.333,5.526-29.333c-33.543,19.32-57.502,52.231-57.502,52.231c-16.584,32.553-2.948,57.953-8.11,51.872
+                    c-5.162-6.081-4.052-28.261-4.052-28.261c-35.017,33.63-38.699,49.724-38.699,49.724c-5.896,14.31-11.058,52.59-11.058,52.59
+                    c-3.318-3.579,0-23.611,0-23.611c-8.479,17.889-4.422,34.701-4.422,34.701C34.309,240.407,33.2,215.365,33.2,215.365z"
+                  ></path>
+                  <path
+                    style="fill: white"
+                    d="M310.01,14.191c0,0-13.483,13.065-30.758,26.053c-27.081,21.359-53.156,38.819-53.156,38.819
+                    C123.945,139.425,67.025,237.932,48.212,271.708h10.002c3.535-2.834,8.844-4.971,31.014-11.389
+                    c28.011-8.11,44.72-25.041,44.72-25.041s-25.553,14.31-37.595,12.88s-28.223,3.1-28.223,3.1s-6.179-2.861,24.291-7.392
+                    s80.596-38.634,80.596-38.634s-19.167,7.87-28.011,7.152c-8.844-0.718-30.714,0-30.714,0c14.495-3.34,28.011-1.43,50.126-9.779
+                    c22.115-8.349,20.886-7.631,20.886-7.631c25.063-8.349,35.474-34.342,35.474-34.342c-4.335,1.67-37.443,5.722-51.176,1.67
+                    c-13.734-4.052-37.132,0-37.132,0c22.115-7.392,27.032-4.052,32.433-4.291c5.406-0.239,22.855,1.191,57.502-10.731
+                    s44.475-26.711,44.475-26.711l-23.366,3.122c15.257-2.567,32.455-12.662,32.455-12.662c-10.568,2.861-27.032,4.291-27.032,4.291
+                    c19.412-4.291,30.225-10.253,30.225-10.253c18.183-13.832,22.36-34.342,22.36-34.342c-25.803,8.822-46.194,4.77-46.194,4.77
+                    c35.387-2.382,45.215-11.449,50.126-13.592c4.917-2.148,6.94-11.03,6.94-11.03c-17.878,6.44-38.15,7.511-38.15,7.511
+                    c21.93-3.399,40.722-14.49,40.722-14.49V32.792c-8.479,4.83-23.399,8.588-23.399,8.588l23.219-15.023
+                    C316.091,18.841,310.01,14.191,310.01,14.191z"
+                  ></path>
+                  <polygon
+                    style="fill: white"
+                    points="23.551,290.571 37.361,296.103 39.933,289.989 26.124,284.458 	"
+                  ></polygon>
+                  <path
+                    style="fill: white"
+                    d="M177.036,285.458c-45.628,21.936-89.462,36.888-147.758,38.846c-5.439,0.185-5.466,5.624,0,5.439
+                    c52.15-1.751,95.543-12.961,137.391-32.575c46.618-21.854,89.435-40.167,147.828-46.39c5.385-0.577,3.095-5.814-2.252-5.243
+                    C260.531,251.051,218.514,265.519,177.036,285.458z"
+                  ></path>
+                </g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+                <g></g>
+              </svg>
+              <button id="submit">Publish</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <h1 id="paq" style="text-align: center; color: rgba(0, 0, 0, 0.295)">
+        Publish a Quote
+      </h1>
+      <div class="quote-feed">
+        <!-- <div class="content-container">
+          <div class="main-quote-container">
+            <div class="inner-quote-container">
+              <div class="profile-container">
+                <div class="profile-image-container">
+                  <img src="Assets/DefaultProfileIcon.png" alt="" />
+                </div>
+                <div class="name-container">
+                  <h1 class="name" name="name">Name</h1>
+                </div>
+              </div>
+              <div class="quote-container">
+                <h1 class="quote" id="quote">
+                  I'm selfish, impatient and a little insecure. I make mistakes,
+                  I am out of control and at times hard to handle. But if you
+                  can't handle me at my worst, then you sure as hell don't
+                  deserve me at my best.
+                </h1>
+              </div>
+              <div class="action-container">
+                <div class="like-comment">
+                  <button class="interaction-container">
+                    <div class="action-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        id="Capa_1"
+                        enable-background="new 0 0 512 512"
+                        height="512"
+                        viewBox="0 0 512 512"
+                        width="512"
+                      >
+                        <linearGradient
+                          id="SVGID_1_"
+                          gradientUnits="userSpaceOnUse"
+                          x1="256"
+                          x2="256"
+                          y1="512"
+                          y2="0"
+                        >
+                          <stop offset="0" stop-color="#fd3a84" />
+                          <stop offset="1" stop-color="#ffa68d" />
+                        </linearGradient>
+                        <linearGradient
+                          id="SVGID_2_"
+                          gradientUnits="userSpaceOnUse"
+                          x1="256"
+                          x2="256"
+                          y1="421"
+                          y2="121"
+                        >
+                          <stop offset="0" stop-color="#ffc2cc" />
+                          <stop offset="1" stop-color="#fff2f4" />
+                        </linearGradient>
+                        <g>
+                          <g>
+                            <g>
+                              <circle
+                                cx="256"
+                                cy="256"
+                                fill="url(#SVGID_1_)"
+                                r="256"
+                              />
+                            </g>
+                          </g>
+                          <g>
+                            <g>
+                              <path
+                                d="m331 121c-32.928 0-58.183 18.511-75 46.058-16.82-27.552-42.077-46.058-75-46.058-25.511 0-48.788 10.768-65.541 30.32-15.772 18.409-24.459 42.993-24.459 69.225 0 28.523 10.698 54.892 33.666 82.986 20.138 24.632 49.048 49.971 82.524 79.313 12.376 10.848 25.174 22.065 38.775 34.306 2.853 2.567 6.444 3.85 10.035 3.85s7.182-1.283 10.035-3.851c13.601-12.241 26.398-23.458 38.775-34.306 33.476-29.341 62.386-54.681 82.524-79.313 22.968-28.092 33.666-54.462 33.666-82.985 0-53.637-36.748-99.545-90-99.545z"
+                                fill="url(#SVGID_2_)"
+                              />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </div>
+                    <h2 id="likes">25</h2>
+                  </button>
+                </div>
+                <div class="date-display">
+                  <p id="date" style="font-weight: 500; font-size: 20px">
+                    5/3/2021
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <script type="text/javascript">
+      var light = $(".light-mode");
+      var dark = $(".dark-mode");
+      var form_container = $(".form-container");
+
+      function changestate(name) {
+        const quote_container = document.querySelectorAll(
+          ".main-quote-container"
+        );
+        if (name == "light") {
+          dark.removeClass("active");
+          light.addClass("active");
+          $("h1").removeClass("head-color-change");
+          $("#quote").removeClass("content-color-change");
+          $("p").removeClass("head-color-change");
+          form_container.css("background-color", "white");
+          for (var i = 0; i < quote_container.length; i++) {
+            quote_container[i].style.backgroundColor = "white";
+            quote_container[i].style.backgroundImage =
+              "linear-gradient(315deg,#d7e1ec 0%, white 74%)";
+          }
+          document.body.style.backgroundColor = "#E4E4E4";
+        } else {
+          light.removeClass("active");
+          dark.addClass("active");
+          $("h1").addClass("head-color-change");
+          $("#quote").addClass("content-color-change");
+          $("p").addClass("head-color-change");
+          form_container.css("background-color", "#404040");
+          for (var i = 0; i < quote_container.length; i++) {
+            quote_container[i].style.backgroundColor = "#2d3436";
+            quote_container[i].style.backgroundImage =
+              "linear-gradient(315deg, #2d3436 0%, #1f1f1f 74%)";
+          }
+          document.body.style.backgroundColor = "#202020";
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      var c = document.getElementById("color"),
+        ta = document.getElementById("quote-input");
+      c.addEventListener(
+        "input",
+        function () {
+          ta.style.color = c.value;
+        },
+        false
+      );
+    </script>
+    <script src="client.js"></script>
+  </body>
+</html>
